@@ -19,4 +19,3 @@ centroids, clusterAssment = kmeans.kmeans(dataSet, k)
 print("step 3: show the result...")
 kmeans.showCluster(dataSet, k, centroids, clusterAssment)
 
-exit(0)
