@@ -1,5 +1,5 @@
-from numpy import *
 import matplotlib.pyplot as plt
+from numpy import *
 
 
 # calculate Euclidean distance
@@ -63,17 +63,19 @@ def showCluster(dataSet, k, centroids, clusterAssment):
         print("Sorry! I can not draw because the dimension of your data is not 2!")
         return 1
 
-    mark = ['or', 'ob', 'og', 'ok', '^r', '+r', 'sr', 'dr', '<r', 'pr']
+    mark = ['or', 'ob', 'og', 'ok', '^r', '+r', 'sr', 'dr', '<r', 'pr', 'xr', 'sb', 'sg', 'sk', '2r', '<b', '<g', '+b',
+            '+g', 'pb']
     if k > len(mark):
         print("Sorry! Your k is too large! please contact Zouxy")
         return 1
 
-        # draw all samples
+    # draw all samples
     for i in range(numSamples):
         markIndex = int(clusterAssment[i, 0])
         plt.plot(dataSet[i, 0], dataSet[i, 1], mark[markIndex])
 
-    mark = ['Dr', 'Db', 'Dg', 'Dk', '^b', '+b', 'sb', 'db', '<b', 'pb']
+    mark = ['Dr', 'Db', 'Dg', 'Dk', '^b', '+b', 'sb', 'db', '<b', 'pb', 'or', 'ob', 'og', 'ok', '^r', '+r', 'sr', 'dr',
+            '<r', 'pr']
     # draw the centroids
     for i in range(k):
         plt.plot(centroids[i, 0], centroids[i, 1], mark[i], markersize=12)

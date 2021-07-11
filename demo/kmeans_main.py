@@ -1,4 +1,5 @@
 from numpy import *
+
 import demo.kmeans as kmeans
 
 ## step 1: load data
@@ -11,7 +12,7 @@ for line in fileIn.readlines():
 
 ## step 2: clustering...
 print("step 2: clustering...")
-dataSet = mat(dataSet)
+dataSet = matrix(dataSet)
 k = 4
 centroids, clusterAssment = kmeans.kmeans(dataSet, k)
 
